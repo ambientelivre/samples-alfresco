@@ -8,8 +8,8 @@ for (var member in members)
     var username = members[member].properties.userName;
     var email_user = person.properties["cm:email"];
 	   
-  	//print(username);  
-	  //print(email_user);  
+    //print(username);  
+    //print(email_user);  
 	   
     var mail = actions.create("mail");
     mail.parameters.to =  email_user;
