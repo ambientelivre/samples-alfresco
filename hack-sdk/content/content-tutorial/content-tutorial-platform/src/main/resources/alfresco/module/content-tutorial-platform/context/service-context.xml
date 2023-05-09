@@ -23,10 +23,10 @@
     <!-- A simple class that is initialized by Spring -->
    
 
-    <!-- A simple module component that will be executed once.
-         Note. this module component will only be executed once, and then there will be an entry for it in the Repo DB.
-         So doing for example $ mvn clean install alfresco:run twice will only execute this component the first time.
-         You need to remove /alf_data_dev for it to be executed again. -->
+<!-- Um componente de módulo simples que será executado uma vez.
+         Nota. este componente de módulo será executado apenas uma vez, e então haverá uma entrada para ele no Repo DB.
+         Assim, fazer, por exemplo, $ mvn clean install alfresco:run duas vezes só executará este componente na primeira vez.
+         Você precisa remover /alf_data_dev para que ele seja executado novamente. -->
   <bean id="${project.artifactId}_dictionaryBootstrap" parent="dictionaryModelBootstrap" depends-on="dictionaryBootstrap">
         <property name="models">
             <list>

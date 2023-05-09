@@ -1,38 +1,38 @@
 <alfresco-config>
-   <!-- Document Library config section -->
+ <!-- Secção de configuração da biblioteca de documentos -->
    <config evaluator="string-compare" condition="DocumentLibrary">
       <!--
-         Used by the "Manage Aspects" action
+         Utilizado pela acção "Mange Aspects"
 
-         For custom aspects, remember to also add the relevant i18n string(s)
+         Para aspectos personalizados, lembre-se de adicionar também a(s) cadeia(s) i18n relevante(s)
             cm_myaspect=My Aspect
       -->
       <aspects>
-         <!-- Aspects that a user can see -->
+         <!-- Aspectos que um utilizador pode ver -->
          <visible>
             <aspect name="sc:webable" />
             <aspect name="sc:productRelated" />            
          </visible>
 
-         <!-- Aspects that a user can add. Same as "visible" if left empty -->
+  <!-- Aspectos que um utilizador pode adicionar. O mesmo que "visível" se deixado vazio -->
          <addable>
          </addable>
-
-         <!-- Aspects that a user can remove. Same as "visible" if left empty -->
+         
+  <!-- Aspectos que um utilizador pode remover. O mesmo que "visível" se deixado vazio -->
          <removeable>
          </removeable>
       </aspects>
 
       <!--
-         Used by the "Change Type" action
+         Utilizado pela acção "Alterar tipo"
 
-         Define valid subtypes using the following example:
+         Defina subtipos válidos usando o exemplo a seguir:
             <type name="cm:content">
                <subtype name="cm:mysubtype" />
             </type>
 
-         Remember to also add the relevant i18n string(s):
-            cm_mysubtype=My SubType
+         Lembre-se de adicionar também a(s) cadeia(s) i18n relevante(s):
+            cm_mysubtype=My Subtype
       -->
       <types>
 	      	 <type name="cm:content">
@@ -49,18 +49,18 @@
    
    <config replace="true" evaluator="string-compare" condition="AdvancedSearch">
       <advanced-search>
-         <!-- Forms for the advanced search type list -->
+           <!-- Formulários para a lista de tipos de pesquisa avançada -->
          <forms>
-            <!--
-               The 'form' config element contains the name of the model type
-               of the form to display.
+           <!--
+               O elemento de configuração 'form' contém o nome do tipo de modelo
+               do formulário a ser exibido.
                
-               The element supports the following optional attributes:
-                  id = form id, the id of "search" will be assumed if not set
-                  label = label text to display - defaults to model type if not set
-                  labelId = I18N message id of label text to display
-                  description = description text to display
-                  descriptionId = I18N message id of description text to display
+               O elemento suporta os seguintes atributos opcionais:
+                  id = id do formulário, o id de "search" será assumido se não for definido
+                  label = texto da etiqueta a apresentar - a predefinição é o tipo de modelo se não for definido
+                  labelId = id da mensagem I18N do texto da etiqueta a apresentar
+                  description = texto da descrição a apresentar
+                  descriptionId = id da mensagem I18N do texto da descrição a apresentar
             -->
             <form labelId="search.form.label.cm_content" descriptionId="search.form.desc.cm_content">cm:content</form>
             <form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder</form>            
@@ -70,10 +70,10 @@
       </advanced-search>
    </config>
 
-   <!-- sc:whitepaper type (existing nodes) -->
+   <!-- tipo sc:whitepaper (nós existentes) -->
    <config evaluator="node-type" condition="sc:whitepaper">
       <forms>
-         <!-- Default form configuration for the sc:whitepaper type -->
+          <!-- Configuração de formulário predefinida para o tipo sc:whitepaper -->
          <form>
             <field-visibility>
                <show id="cm:name" />
@@ -213,7 +213,7 @@
             </appearance>
          </form>
 
-         <!-- Document Library pop-up Edit Metadata form -->
+      <!-- Formulário pop-up Editar Metadados da Biblioteca de Documentos -->
          <form id="doclib-simple-metadata">
             <field-visibility>
                <show id="cm:name" />
@@ -257,7 +257,7 @@
             </appearance>
          </form>
          
-         <!-- Document Library Inline Edit form -->
+               <!-- Formulário de edição em linha da biblioteca de documentos -->
          <form id="doclib-inline-edit">
             <field-visibility>
                <show id="cm:name" />
@@ -285,10 +285,10 @@
       </forms>
    </config>
    
-   <!-- sc:marketingDoc type (existing nodes) -->
+   <!-- Tipo sc:marketingDoc (nós existentes) -->
    <config evaluator="node-type" condition="sc:marketingDoc">
       <forms>
-         <!-- Default form configuration for the sc:marketingDoc type -->
+   <!-- Configuração de formulário predefinida para o tipo sc:marketingDoc -->
          <form>
             <field-visibility>
                <show id="cm:name" />
@@ -435,7 +435,7 @@
             </appearance>
          </form>
 
-         <!-- Document Library pop-up Edit Metadata form -->
+           <!-- Formulário pop-up Editar Metadados da Biblioteca de Documentos -->
          <form id="doclib-simple-metadata">
             <field-visibility>
                <show id="cm:name" />
@@ -483,7 +483,7 @@
             </appearance>
          </form>
          
-         <!-- Document Library Inline Edit form -->
+     <!-- Formulário de edição em linha da biblioteca de documentos -->
          <form id="doclib-inline-edit">
             <field-visibility>
                <show id="cm:name" />
@@ -541,7 +541,7 @@
 	   </forms>
    </config>
    
-   <!-- sc:whitepaper type (new nodes) -->
+   <!-- tipo sc:whitepaper (novos nós) -->
    <config evaluator="model-type" condition="sc:whitepaper">
       <forms>
          <!-- Search form -->
