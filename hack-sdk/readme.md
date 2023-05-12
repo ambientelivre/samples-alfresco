@@ -23,7 +23,7 @@ O Alfresco SDK é uma ferramenta poderosa para desenvolvimento de projetos Alfre
 <h3 align="center">Personalizando o Conteúdo do Alfresco</h3>
 O Alfresco permite a personalização do conteúdo armazenado no sistema. Para criar conteúdo personalizado no Alfresco, siga as instruções abaixo:
 
-1.Crie um novo modelo de conteúdo no Alfresco
+1. Crie um novo modelo de conteúdo no Alfresco
 2. Defina as propriedades e metadados do modelo de conteúdo
 3. Implantar o modelo de conteúdo personalizado no Alfresco
 <h3 align="center">Implantando o Projeto e Conteúdo Personalizado no Alfresco</h3>
