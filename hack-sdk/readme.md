@@ -7,7 +7,6 @@ Este tutorial é destinado a desenvolvedores que desejam aprender a criar um pro
 - Como configurar o ambiente de desenvolvimento para o Alfresco SDK
 * Como criar um projeto Alfresco SDK
 + Como criar conteúdo personalizado no Alfresco
-- Como implantar o projeto e conteúdo personalizado no Alfresco
 <h3 align="center">Configuração do Ambiente de Desenvolvimento</h3>
 Antes de começar a desenvolver, você precisará configurar o ambiente de desenvolvimento. Para isso, siga os passos abaixo:
 
@@ -26,8 +25,3 @@ O Alfresco permite a personalização do conteúdo armazenado no sistema. Para c
 1. Crie um novo modelo de conteúdo no Alfresco
 2. Defina as propriedades e metadados do modelo de conteúdo
 3. Implantar o modelo de conteúdo personalizado no Alfresco
-<h3 align="center">Implantando o Projeto e Conteúdo Personalizado no Alfresco</h3>
-Depois de criar o projeto e conteúdo personalizado, você precisará implantá-lo no Alfresco. Para implantar o projeto e conteúdo personalizado no Alfresco, siga as instruções abaixo:
-
-1. Crie um arquivo JAR do seu projeto usando o comando Maven
-2. Faça o deploy do arquivo JAR no Alfresco
