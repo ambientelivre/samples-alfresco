@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AlfrescoCmisExample/1.0.0": {
+        "dependencies": {
+          "Apache.DotCMIS": "0.6.0",
+          "PortCMIS": "0.3.0"
+        },
+        "runtime": {
+          "AlfrescoCmisExample.dll": {}
+        }
+      },
+      "Apache.DotCMIS/0.6.0": {
+        "runtime": {
+          "lib/DotCMIS.dll": {
+            "assemblyVersion": "0.6.0.0",
+            "fileVersion": "0.6.0.0"
+          }
+        }
+      },
+      "PortCMIS/0.3.0": {
+        "runtime": {
+          "lib/netstandard1.1/PortCMIS.dll": {
+            "assemblyVersion": "0.3.0.0",
+            "fileVersion": "0.3.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AlfrescoCmisExample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Apache.DotCMIS/0.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yoKnqwD1PO9vsh+M3HWC25AxdMkg0RKdcpnrgqMyfXs5glPyfprsuzH5HmcuUUWI076Zbo09SpsAPZZ53GbyYQ==",
+      "path": "apache.dotcmis/0.6.0",
+      "hashPath": "apache.dotcmis.0.6.0.nupkg.sha512"
+    },
+    "PortCMIS/0.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S51c8Ot+bxkY3UPLFevOE7DTcTFCNXNUzFYAIA8o7gSPSasZ7+23YWFuqfczfScyFPgdiJ6c4R0lUJ6NbatsSw==",
+      "path": "portcmis/0.3.0",
+      "hashPath": "portcmis.0.3.0.nupkg.sha512"
+    }
+  }
+}
