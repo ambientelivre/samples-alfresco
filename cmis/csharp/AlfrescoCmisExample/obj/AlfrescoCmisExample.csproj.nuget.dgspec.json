@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/opt/projetos/samples-alfresco/cmis/csharp-dotnet/AlfrescoCmisExample/AlfrescoCmisExample.csproj": {}
+    "/opt/projetos/samples-alfresco/cmis/csharp/AlfrescoCmisExample/AlfrescoCmisExample.csproj": {}
   },
   "projects": {
-    "/opt/projetos/samples-alfresco/cmis/csharp-dotnet/AlfrescoCmisExample/AlfrescoCmisExample.csproj": {
+    "/opt/projetos/samples-alfresco/cmis/csharp/AlfrescoCmisExample/AlfrescoCmisExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/opt/projetos/samples-alfresco/cmis/csharp-dotnet/AlfrescoCmisExample/AlfrescoCmisExample.csproj",
+        "projectUniqueName": "/opt/projetos/samples-alfresco/cmis/csharp/AlfrescoCmisExample/AlfrescoCmisExample.csproj",
         "projectName": "AlfrescoCmisExample",
-        "projectPath": "/opt/projetos/samples-alfresco/cmis/csharp-dotnet/AlfrescoCmisExample/AlfrescoCmisExample.csproj",
+        "projectPath": "/opt/projetos/samples-alfresco/cmis/csharp/AlfrescoCmisExample/AlfrescoCmisExample.csproj",
         "packagesPath": "/home/williane/.nuget/packages/",
-        "outputPath": "/opt/projetos/samples-alfresco/cmis/csharp-dotnet/AlfrescoCmisExample/obj/",
+        "outputPath": "/opt/projetos/samples-alfresco/cmis/csharp/AlfrescoCmisExample/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/williane/.nuget/NuGet/NuGet.Config"
