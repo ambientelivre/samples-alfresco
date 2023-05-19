@@ -42,7 +42,15 @@ class Program
             string fileName = Path.GetFileName(filePath);
             string mimeType = GetMimeType(fileName);
 
-            UploadDocumento(session, newFolder.Id, filePath, mimeType, fileName);
+            string upload = UploadDocumento(session, newFolder.Id, filePath, mimeType, fileName);
+
+            string documentId = upload;
+            Console.WriteLine(documentId);
+
+            // Define os metadados customizados para o documento carregado
+            string especie = "Processo de Pagamento";
+            string descricao = "Este processo é advindo da unidade x e referente a pagamento";
+            DefinirMetadadosAtos(session, documentId, especie, descricao);
         }
 
         Console.WriteLine("Upload feito.");
@@ -51,6 +59,13 @@ class Program
         //Lista diretórios e conteúdos de cada diretório
         ListarDiretorios(session, parentFolderId);
 
+        // // Mostrar Metadados de documento
+        // string documentId2 = "4539035b-5a59-41f7-ad47-2c983c7d230d"; // ID do documento no Alfresco
+        // MostrarMetadadosDocumentoEspecífico(session, documentId2);
+
+        // Mostrar Metadados de documentos de uma pasta
+        MostrarMetadadosPasta(session, parentFolderId);
+
         // Faz o download de conteúdos do Alfresco para a pasta local de downloads
         string localDownloadPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile); // Pasta local de downloads
         string alfrescoFolderPath = newFolder.Id;
@@ -58,21 +73,6 @@ class Program
         DownloadDocumentos(session, localDownloadPath, alfrescoFolderPath);
 
         Console.WriteLine("Download concluído.");
-
-        // Mostrar Metadados de documento
-        string documentId = "4539035b-5a59-41f7-ad47-2c983c7d230d"; // ID do documento no Alfresco
-        MostrarMetadadosDocumentoEspecífico(session, documentId);
-
-        // Mostrar Metadados de documentos de uma pasta
-        MostrarMetadadosPasta(session, parentFolderId);
-
-        // Inserir metadados em um documento
-        string documentId2 = "acc74b4c-dcfd-4dab-87a6-1ffabc9e0810"; // ID do documento no Alfresco
-        string especie = "Processo de Pagamento";
-        string descricao = "Este processo é advindo da unidade x e referente a pagamento";
-        // aqui pode inserir os outros metadados customizados, além de inserir também no método
-
-        DefinirMetadadosAtos(session, documentId2, especie, descricao);
     }
     static IFolder CriaDiretorio(ISession session, string parentFolderId)
     {
@@ -124,13 +124,16 @@ class Program
 
         return newFolderName;
     }
-
-    static void UploadDocumento(ISession session, string parentFolderId, string filePath, string mimeType, string fileName)
+ 
+    static string UploadDocumento(ISession session, string parentFolderId, string filePath, string mimeType, string fileName)
     {
-        IFolder? parentFolder = session.GetObject(parentFolderId) as IFolder;
-        IDictionary<string, object> properties = new Dictionary<string, object>();
-        properties[PropertyIds.ObjectTypeId] = "cmis:document";
-        properties[PropertyIds.Name] = fileName;
+        IFolder parentFolder = session.GetObject(parentFolderId) as IFolder;
+
+        IDictionary<string, object> properties = new Dictionary<string, object>
+        {
+            [PropertyIds.ObjectTypeId] = "cmis:document",
+            [PropertyIds.Name] = fileName
+        };
 
         using (FileStream stream = new FileStream(filePath, FileMode.Open))
         {
@@ -143,6 +146,11 @@ class Program
             };
 
             IDocument document = parentFolder.CreateDocument(properties, contentStream, VersioningState.Major);
+            string documentIdWithVersion = document.Id;
+            string documentId = documentIdWithVersion.Split(';')[0];
+            Console.WriteLine(documentId);
+
+            return documentId;
         }
     }
 
@@ -210,22 +218,6 @@ class Program
         }
     }
 
-    static void DefinirMetadadosAtos(ISession session, string documentId2, string especie, string descricao)
-    {
-        IDocument document = session.GetObject(documentId2) as IDocument;
-
-        // Cria um dicionário de propriedades para definir os metadados
-        IDictionary<string, object> properties = new Dictionary<string, object>();
-
-        properties["atos:docEspecie"] = especie;
-        properties["atos:docDescricao"] = descricao;
-
-        // Atualiza as propriedades do documento
-        document.UpdateProperties(properties);
-
-        Console.WriteLine("Metadados customizados do documento atualizados com sucesso!");
-    }
-
     static void MostrarMetadadosPasta(ISession session, string parentFolderId)
     {
         IFolder folder = session.GetObject(parentFolderId) as IFolder;
@@ -259,16 +251,31 @@ class Program
         Console.WriteLine();
     }
 
-    static void MostrarMetadadosDocumentoEspecífico(ISession session, string documentId)
+    // static void MostrarMetadadosDocumentoEspecífico(ISession session, string documentId2)
+    // {
+    //     ICmisObject document = session.GetObject(documentId2);
+
+    //     foreach (var property in document.Properties)
+    //     {
+    //         Console.WriteLine(property.QueryName + ": " + property.Value);
+    //     }
+    // }
+
+    static void DefinirMetadadosAtos(ISession session, string documentId, string especie, string descricao)
     {
-        ICmisObject document = session.GetObject(documentId);
+        IDocument document = session.GetObject(documentId) as IDocument;
 
-        foreach (var property in document.Properties)
-        {
-            Console.WriteLine(property.QueryName + ": " + property.Value);
-        }
+        // Cria um dicionário de propriedades para definir os metadados
+        IDictionary<string, object> properties = new Dictionary<string, object>();
+
+        properties["atos:docEspecie"] = especie;
+        properties["atos:docDescricao"] = descricao;
+
+        // Atualiza as propriedades do documento
+        document.UpdateProperties(properties);
+
+        Console.WriteLine("Metadados customizados do documento atualizados com sucesso!");
     }
-
     static void DownloadDocumentos(ISession session, string localDownloadPath, string alfrescoFolderPath)
     {
         IFolder folder = session.GetObject(alfrescoFolderPath) as IFolder;
