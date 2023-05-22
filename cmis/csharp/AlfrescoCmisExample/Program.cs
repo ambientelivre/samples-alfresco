@@ -63,7 +63,7 @@ class Program
         // string documentId2 = "4539035b-5a59-41f7-ad47-2c983c7d230d"; // ID do documento no Alfresco
         // MostrarMetadadosDocumentoEspecífico(session, documentId2);
 
-        // Mostrar Metadados de documentos de uma pasta
+        // Mostrar Metadados de todos os documentos de uma pasta
         MostrarMetadadosPasta(session, parentFolderId);
 
         // Faz o download de conteúdos do Alfresco para a pasta local de downloads
@@ -260,7 +260,6 @@ class Program
     //         Console.WriteLine(property.QueryName + ": " + property.Value);
     //     }
     // }
-
     static void DefinirMetadadosAtos(ISession session, string documentId, string especie, string descricao)
     {
         IDocument document = session.GetObject(documentId) as IDocument;
