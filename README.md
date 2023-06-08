@@ -34,5 +34,4 @@ Themes for Alfresco Share.
 
 
 Buscando Conhecimento em Alfresco ?
-Conheça a Formação de Alfresco da Ambiente Livre:
-[Treinamento Alfresco Platform] https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html
+Conheça a Formação de Alfresco da Ambiente Livre: https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html
