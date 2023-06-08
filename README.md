@@ -33,5 +33,6 @@ Samples custom Search with metadata custom field , Live e Advanced Search.
 Themes for Alfresco Share.
 
 
-Buscando Conhecimento em Alfresco ?
-Conheça a Formação de Alfresco da Ambiente Livre: https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html
+## AMbiente Livre
+
+Trainning in Alfresco? Look this https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html
