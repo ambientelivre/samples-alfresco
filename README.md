@@ -34,6 +34,6 @@ Samples custom Search with metadata custom field , Live e Advanced Search.
 Themes for Alfresco Share.
 
 
-## AMbiente Livre
+## Ambiente Livre
 
 Trainning in Alfresco? Look this https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html
