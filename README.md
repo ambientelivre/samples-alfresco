@@ -20,6 +20,7 @@ Sample Connect, create Folder , upload Documents, save metadata  in Alfresco CMI
 Samples with Javascript.
 
 * send_mail_with_template.js - Send Mails in Alfresco Javascript API.
+* start-parallel-review-workflow.js - Start Parallel Reviews Workflow in Alfresco Javascript API
 
 ## metadados 
 
