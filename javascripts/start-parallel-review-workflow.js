@@ -22,12 +22,11 @@ function startWorkflow(assigneeList) {
     var futureDate = new Date();
     futureDate.setDate(futureDate.getDate() + 7);
     workflow.parameters["bpm:workflowDueDate"] = futureDate;
-	workflow.parameters["wf:requiredApprovePercent"] = 100;
+    workflow.parameters["wf:requiredApprovePercent"] = 100;
     return workflow.execute(document);
 }
 
 function main() {
-
   var listUsers = "admin,marcio";	
   var assigneeList = listUsers.split(",");
   var assigners = [];
@@ -41,10 +40,8 @@ function main() {
 	   assigners = [assigner[0]];		
 	 else if (assigneeList.length == 2)
 	   assigners = [assigner[0],assigner[1]];	
-  }	  
-	
-  startWorkflow(assigners);
-	
+  }	
+  startWorkflow(assigners);	
 }
 
 main();
