@@ -2,14 +2,15 @@
 * counter.js
 * Alfresco Sample Script For Incremental Counter by @ambientelivre
 *
-* This script start and set a value for incremental counter using a single metadata of an aspect for alfresco 
-* (available in the link below to import)
+* This script start and set a value for incremental counter using a metadata
 * 
+* But first, you need to import the aspect for alfresco share available in the link below
+* https://github.com/ambientelivre/samples-alfresco/blob/master/metadados/aspect/AlfrescoCounter.zip
 *
 * The project is open source in https://github.com/ambientelivre/samples-alfresco
 * contrib!
 * Created by Williane Delfino     at williane@ambientelivre.com.br 
-*            Marcio Junior Vieita at marcio@ambientelivre.com.br
+*            Marcio Junior Vieira at marcio@ambientelivre.com.br
 *
 */
 
