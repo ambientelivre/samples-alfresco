@@ -6,8 +6,8 @@
 *
 * The project is open source in https://github.com/ambientelivre/samples-alfresco
 * contrib!
-* Create by Williane Delfino     at williane@ambientelivre.com.br 
-*           Marcio Junior Vieita at marcio@ambientelivre.com.br
+* Created by Williane Delfino     at williane@ambientelivre.com.br 
+*            Marcio Junior Vieira at marcio@ambientelivre.com.br
 *
 * Parameters this model look workflowModel.xml :
 * https://github.com/AlfrescoArchive/alfresco-repository/blob/master/src/main/resources/alfresco/workflow/workflowModel.xml
