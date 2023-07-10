@@ -1,0 +1,110 @@
+<alfresco-config>
+   <config evaluator="string-compare" condition="Users" replace="true">
+      <users>
+         <!-- minimum length for username and password -->
+         <username-min-length>2</username-min-length>
+         <password-min-length>3</password-min-length>
+         <show-authorization-status>false</show-authorization-status>
+      </users>
+      <!-- This enables/disables the Add External Users Panel on the Add Users page. -->
+      <enable-external-users-panel>false</enable-external-users-panel>
+   </config>
+     
+   <config evaluator="string-compare" condition="AdvancedSearch" replace="true">
+        <advanced-search>
+            <!-- Forms for the advanced search type list -->
+            <forms>
+                <!--
+                   The 'form' config element contains the name of the model type
+                   of the form to display.
+
+                   The element supports the following optional attributes:
+                      id = form id, the id of "search" will be assumed if not set
+                      label = label text to display - defaults to model type if not set
+                      labelId = I18N message id of label text to display
+                      description = description text to display
+                      descriptionId = I18N message id of description text to display
+                -->
+                <form labelId="search.form.label.cm_content" descriptionId="search.form.desc.cm_content">cm:content</form>
+                <form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder</form>
+            	<form labelId="RH Documentos" descriptionId="Busca por arquivos do RH">rh:funcionario</form>
+            	<form id="custom-search1" labelId="Model 1" descriptionId="Busca por arquivos do Model 1">cm:content</form>
+            	<form id="custom-search2" labelId="Model 2" descriptionId="Busca por arquivos do Model 2">cm:content</form>
+            </forms>
+        </advanced-search>
+    </config>
+    
+    <!--propriedades customizadas de aspecto-->
+    <config evaluator="model-type" condition="cm:content">
+    <forms>
+        <form id="custom-search1">
+            <field-visibility>
+                <show id="model1:propriedadeCustomizada1" force="true" />
+
+            </field-visibility>
+            <appearance>
+                <field id="model1:propriedadeCustomizada1">
+                    <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+                </field>
+                
+            </appearance>
+        </form>
+    </forms>
+    </config>
+    
+    <!--propriedades customizadas de aspecto-->
+    <config evaluator="model-type" condition="cm:content">
+    <forms>
+        <form id="custom-search2">
+            <field-visibility>
+                <show id="model2:propriedadeCustomizada1" force="true" />
+                <show id="model2:propriedadeCustomizada2" force="true" />
+
+            </field-visibility>
+            <appearance>
+                <field id="model2:propriedadeCustomizada1">
+                    <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+                </field>
+                
+                <field id="model2:propriedadeCustomizada2">
+                    <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+                </field>
+                
+            </appearance>
+        </form>
+    </forms>
+    </config>
+    
+    <!--propriedades customizadas de tipo-->
+    <config evaluator="model-type" condition="rh:funcionario">
+    <forms>
+        <!-- Search form -->
+        <form id="search">
+            <field-visibility>
+
+                <show id="rh:nome" />
+		<show id="rh:matricula" />
+		<show id="rh:inicio" />
+		<show id="rh:fim" />
+
+            </field-visibility>
+            <appearance>
+
+                <field id="rh:nome" label-id="Nome">
+                    <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+                </field>
+                <field id="rh:matricula" label-id="Matrícula">
+                    <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+                </field>
+                <field id="rh:inicio" label-id="Início de Trabalho">
+                    <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+                </field>
+                <field id="rh:fim" label-id="Final do Trabalho">
+                    <control template="/org/alfresco/components/form/controls/textfield.ftl" />
+                </field>
+
+            </appearance>
+        </form>
+    </forms>
+    </config>
+</alfresco-config>   
