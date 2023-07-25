@@ -1,0 +1,64 @@
+<alfresco-config>
+   <config evaluator="string-compare" condition="Users" replace="true">
+      <users>
+         <!-- minimum length for username and password -->
+         <username-min-length>2</username-min-length>
+         <password-min-length>3</password-min-length>
+         <show-authorization-status>false</show-authorization-status>
+      </users>
+      <!-- This enables/disables the Add External Users Panel on the Add Users page. -->
+      <enable-external-users-panel>false</enable-external-users-panel>
+   </config>
+   
+      <!-- Document Library config section -->
+      <config evaluator="string-compare" condition="DocumentLibrary" replace="true">
+         <aspects>
+            <visible>
+               <aspect label="Teste" name="teste:teste"/>
+               <aspect label="Teste2" name="teste:teste2"/>
+            </visible>
+         </aspects>
+      </config>
+
+      <!-- Form configuration section - type -->
+      
+      <!-- Form configuration section - aspect -->
+      <config evaluator="aspect" condition="teste:teste">
+         <forms>
+            <form>
+               <field-visibility>
+                  <show id="teste:nome"/>
+               </field-visibility>
+               <appearance>
+                  <set appearance="whitespace" id="teste:teste_cmm_set0"/>
+                  <field id="teste:nome" set="teste:teste_cmm_set0" label="Nome">
+                      <control template="/org/alfresco/components/form/controls/authority.ftl">
+                        <label>Nome </label>
+                      </control>
+                  </field>
+               </appearance>
+            </form>
+         </forms>
+      </config>
+
+      <!-- Form configuration section - type -->
+      
+      <config evaluator="aspect" condition="teste:teste2">
+         <forms>
+            <form>
+               <field-visibility>
+                  <show id="teste:nome2"/>
+               </field-visibility>
+               <appearance>
+                  <set appearance="whitespace" id="teste:teste2_cmm_set0"/>
+                  <field id="teste:nome2" set="teste:teste2_cmm_set0" label="Nome 2">
+                      <control template="/org/alfresco/components/form/controls/authority.ftl">
+                        <label>Nome 2</label>
+                      </control>
+                  </field>
+               </appearance>
+            </form>
+         </forms>
+      </config>
+     
+</alfresco-config>   
