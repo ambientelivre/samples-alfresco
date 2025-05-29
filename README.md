@@ -1,39 +1,75 @@
-# Samples Alfresco
+#### Exemplos Alfresco
 
-Samples com Alfresco Community Edition by Ambiente Livre Labs.
+<p align="right">
+  <b>
+    <a href="/docs/README.en.md">English</a> |
+    <a href="/README.md">Português</a>
+  </b>
+</p>
 
+Exemplos com Alfresco Community Edition por Ambiente Livre Labs.
 
-Samples Directorys
+Diretórios de Exemplos
 
 ## cmis
 
- Samples with CMIS
+Exemplos com CMIS
 
 ### cmis/csharp
 
-Samples with CMIS and C#
+Exemplos com CMIS e C#
 
-Sample Connect, create Folder , upload Documents, save metadata  in Alfresco CMIS using C#
+Exemplo de conexão, criação de pasta, upload de documentos, salvando metadados no Alfresco CMIS usando C#
 
 ## Javascript
 
-Samples with Javascript.
+Exemplos com Javascript.
 
-* send_mail_with_template.js - Send Mails in Alfresco Javascript API.
-* start-parallel-review-workflow.js - Start Parallel Reviews Workflow in Alfresco Javascript API
+- send_mail_with_template.js - Envia e-mails usando a API Javascript do Alfresco.
+- start-parallel-review-workflow.js - Inicia workflow de revisões paralelas usando a API Javascript do Alfresco.
 
-## metadados 
+## metadados
 
-Samples with Metadata
+Exemplos com Metadados
 
 ## metadados/customsearch
 
-Samples custom Search with metadata custom field , Live e Advanced Search.
+Exemplos de busca personalizada com campo de metadado customizado, busca ao vivo e busca avançada.
 
-## Themes
-Themes for Alfresco Share.
+## Temas
 
+<br>
+<p align="center">
+   <img src="/docs/img/loginPage.png" alt="login_page" width="650">
+</p>
+
+Contém plugins para a personalização do Afresco Share.
+
+### Personalizações Incluídas
+
+- Página de Login: plano de fundo, logo, copyright, cores.
+- Cabeçalho: logo, cor.
+- Rodapé: logo, copyright
+- Alfresco: elementos HTML e CSS do Alfresco foram modificados para personalização visual.
+
+### Como Instalar
+
+1. **Clone o repositório:**
+
+   ```bash
+      git clone https://github.com/ambientelivre/samples-alfresco.git
+   ```
+
+2. **Copie os arquivos .amp para o diretório correspondente do seu Alfresco:**
+
+   ```bash
+      cd share/modules/amps
+   ```
+
+3. **Reinicie o Alfresco para aplicar as mudanças.**
+
+4. **Acesse seu alfresco e selecione o tema na seção ferramentas.**
 
 ## Ambiente Livre
 
-Trainning in Alfresco? Look this https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html
+Trainning in Alfresco? Look this <https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html>
