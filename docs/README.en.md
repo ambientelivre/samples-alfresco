@@ -1,4 +1,12 @@
-# Alfresco Samples
+### Alfresco Samples
+
+<p align="right">
+  <b>
+    <a href="/docs/README.en.md">English</a> |
+    <a href="/README.md">Português</a>
+  </b>
+</p>
+
 
 Samples with Alfresco Community Edition by Ambiente Livre Labs.
 
