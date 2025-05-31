@@ -66,7 +66,13 @@ Contém plugins para a personalização do Afresco Share.
       cp samples-alfresco/themes/ambiente-livre3.0.amp  <YOU-INSTALL-ALFRESCO>/share/modules/amps
    ```
 
-3. **Reinicie o Alfresco para aplicar as mudanças.**
+3. **Reinicie o Alfresco para aplicar as mudanças. (neste exemplo estamos usando docker-compose)**
+
+   ```bash
+      cd <YOU-INSTALL-ALFRESCO>
+      docker-compose down
+      docker-compose up -d build
+   ```
 
 4. **Acesse seu alfresco e selecione o tema na seção ferramentas.**
 
