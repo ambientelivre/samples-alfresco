@@ -71,7 +71,7 @@ Contém plugins para a personalização do Afresco Share.
    ```bash
       cd <YOU-INSTALL-ALFRESCO>
       docker-compose down
-      docker-compose up -d build
+      docker-compose up -d --build
    ```
 
 4. **Acesse seu alfresco e selecione o tema na seção ferramentas.**
