@@ -63,7 +63,7 @@ Contém plugins para a personalização do Afresco Share.
 2. **Copie os arquivos .amp para o diretório correspondente do seu Alfresco:**
 
    ```bash
-      cd share/modules/amps
+      cp samples-alfresco/themes/ambiente-livre3.0.amp  <YOU-INSTALL-ALFRESCO>/share/modules/amps
    ```
 
 3. **Reinicie o Alfresco para aplicar as mudanças.**
