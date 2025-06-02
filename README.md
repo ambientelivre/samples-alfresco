@@ -1,4 +1,4 @@
-#### Exemplos Alfresco
+### Exemplos Alfresco
 
 <p align="right">
   <b>

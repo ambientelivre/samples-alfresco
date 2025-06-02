@@ -55,21 +55,27 @@ Contains plugins for customizing Alfresco Share.
 
 ### How to Install
 
-1. **Clone the repository:**
+1. Clone the repository:
 
    ```bash
       git clone https://github.com/ambientelivre/samples-alfresco.git
    ```
 
-2. **Copy the .amp files to the corresponding directory in your Alfresco:**
+2. Copy the .amp files to the corresponding directory in your Alfresco installation:
 
    ```bash
-      cd share/modules/amps
+      cp samples-alfresco/themes/ambiente-livre3.0.amp  <YOU-INSTALL-ALFRESCO>/share/modules/amps
    ```
 
-3. **Restart Alfresco to apply the changes.**
+3. Restart Alfresco to apply the changes. (in this example we are using **docker-compose**)
 
-4. **Access your Alfresco and select the theme in the tools section.**
+   ```bash
+      cd <YOU-INSTALL-ALFRESCO>
+      docker-compose down
+      docker-compose up -d --build
+   ```
+
+4. Access your Alfresco and select the Ambiente Livre theme in the tools section.
 
 ## Ambiente Livre
 
