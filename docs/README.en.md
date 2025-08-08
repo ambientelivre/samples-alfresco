@@ -7,7 +7,6 @@
   </b>
 </p>
 
-
 Samples with Alfresco Community Edition by Ambiente Livre Labs.
 
 Sample Directories
@@ -29,11 +28,25 @@ Samples with Javascript.
 - send_mail_with_template.js - Sends emails using the Alfresco Javascript API.
 - start-parallel-review-workflow.js - Starts parallel review workflows using the Alfresco Javascript API.
 
-## metadados
+## Libraries 
+
+**alfrescoXmlMetadataImporter** — Automatically fills metadata based on XML file. (Currently PDF only)
+  
+### How to use
+
+1. Copy the desired file(s) and place them in the `Repository > Data Dictionary > Scripts` folder in Alfresco.
+   
+2. Create a rule in the desired folder and select, in the "Run Action" field, the "run script" option, then choose the template file.
+   
+3. Edit the template and XML file as needed.
+
+> **Note:** The XML file must already be in the folder where the rule will be applied.
+
+## metadata
 
 Samples with Metadata
 
-## metadados/customsearch
+## metadata/customsearch
 
 Samples for custom search with custom metadata fields, live search, and advanced search.
 
@@ -55,22 +68,28 @@ Contains plugins for customizing Alfresco Share.
 
 ### How to Install
 
-1. **Clone the repository:**
+1. Clone the repository:
 
    ```bash
       git clone https://github.com/ambientelivre/samples-alfresco.git
    ```
 
-2. **Copy the .amp files to the corresponding directory in your Alfresco:**
+2. Copy the .amp files to the corresponding directory in your Alfresco installation:
 
    ```bash
-      cd share/modules/amps
+      cp samples-alfresco/themes/ambiente-livre3.0.amp  <YOU-INSTALL-ALFRESCO>/share/modules/amps
    ```
 
-3. **Restart Alfresco to apply the changes.**
+3. Restart Alfresco to apply the changes. (in this example we are using **docker-compose**)
 
-4. **Access your Alfresco and select the theme in the tools section.**
+   ```bash
+      cd <YOU-INSTALL-ALFRESCO>
+      docker-compose down
+      docker-compose up -d --build
+   ```
+
+4. Access your Alfresco and select the Ambiente Livre theme in the tools section.
 
 ## Ambiente Livre
 
-Training in Alfresco? Check this out: <https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html>
+Alfresco training? See more at <https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html>
