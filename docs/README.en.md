@@ -7,7 +7,6 @@
   </b>
 </p>
 
-
 Samples with Alfresco Community Edition by Ambiente Livre Labs.
 
 Sample Directories
@@ -29,11 +28,25 @@ Samples with Javascript.
 - send_mail_with_template.js - Sends emails using the Alfresco Javascript API.
 - start-parallel-review-workflow.js - Starts parallel review workflows using the Alfresco Javascript API.
 
-## metadados
+## Libraries 
+
+**alfrescoXmlMetadataImporter** — Automatically fills metadata based on XML file. (Currently PDF only)
+  
+### How to use
+
+1. Copy the desired file(s) and place them in the `Repository > Data Dictionary > Scripts` folder in Alfresco.
+   
+2. Create a rule in the desired folder and select, in the "Run Action" field, the "run script" option, then choose the template file.
+   
+3. Edit the template and XML file as needed.
+
+> **Note:** The XML file must already be in the folder where the rule will be applied.
+
+## metadata
 
 Samples with Metadata
 
-## metadados/customsearch
+## metadata/customsearch
 
 Samples for custom search with custom metadata fields, live search, and advanced search.
 
@@ -79,4 +92,4 @@ Contains plugins for customizing Alfresco Share.
 
 ## Ambiente Livre
 
-Training in Alfresco? Check this out: <https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html>
+Alfresco training? See more at <https://www.ambientelivre.com.br/treinamento/alfresco/fundamental.html>
