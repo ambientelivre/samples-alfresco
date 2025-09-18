@@ -30,7 +30,7 @@ Exemplos com Javascript.
 
 ## Bibliotecas 
 
-**alfrescoXmlMetadataImporter** — Preenche os metadados automaticamente com base em arquivo XML. (Apenas PDF por enquanto)
+**alfrescoXmlMetadataImporter** - Preenche os metadados automaticamente com base em arquivo XML. (Apenas PDF por enquanto)
   
 ### Como utilizar
 
@@ -50,9 +50,12 @@ Exemplos com Metadados
 
 Exemplos de busca personalizada com campo de metadado customizado, busca ao vivo e busca avançada.
 
+## Plugins
+
+- **CustomConstraint:** modelo de conteúdos personalizados preenchidos automaticamente via requisição ao banco de dados.
+
 ## Temas
 
-<br>
 <p align="center">
    <img src="/docs/img/loginPage.png" alt="login_page" width="650">
 </p>
