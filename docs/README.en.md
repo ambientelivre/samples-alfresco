@@ -50,9 +50,12 @@ Samples with Metadata
 
 Samples for custom search with custom metadata fields, live search, and advanced search.
 
+## Custom Constraint
+
+- **CustomConstraint:** custom content models automatically filled via database request.
+
 ## Themes
 
-<br>
 <p align="center">
    <img src="/docs/img/loginPage.png" alt="login_page" width="650">
 </p>
